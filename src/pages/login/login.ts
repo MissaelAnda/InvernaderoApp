@@ -34,7 +34,8 @@ export class LoginPage {
     //this.navCtrl.setRoot(this.home);
     //alert(this.username + " " + this.password);
 
-    this.http.get( '/home/' ).subscribe(data => {
+    this.http.get( '/login/?username=' + this.username +
+    '&password=' + this.password).subscribe(data => {
         console.log(data.text());
       }, error => {
         console.log(error.text());
