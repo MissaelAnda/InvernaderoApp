@@ -7,5 +7,11 @@
 </ion-header>
 
 <ion-content padding>
-  <h1>Hola</h1>
+  <ion-card *ngFor="let i of invernaderos">
+    <ion-item>
+      <ion-icon name="ios-leaf-outline" item-start></ion-icon>
+      <h2>{{i.nombre}}</h2>
+      <p>{{i.ubicacion}}</p>
+    </ion-item>
+  </ion-card>
 </ion-content>
